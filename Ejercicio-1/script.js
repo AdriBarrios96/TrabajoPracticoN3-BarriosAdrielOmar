@@ -1,4 +1,4 @@
-document.addEventListener('DOMContenLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     // Nos aseguramos que todos los elementos HTML esten disponibles
     // usamos referencias a los HTML usando IDs, esto nos permite manipularlos
     // desde JavaScript
