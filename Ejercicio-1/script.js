@@ -2,12 +2,6 @@ document.addEventListener('DOMContentLoaded', () => {
     // Nos aseguramos que todos los elementos HTML esten disponibles
     // usamos referencias a los HTML usando IDs, esto nos permite manipularlos
     // desde JavaScript
-    /*const numero1Input = document.getElementById('numero1');
-    const numero2Input = document.getElementById('numero2');
-    const operacionSelect = document.getElementById('operacion');
-    const botonCalcular = document.getElementById('botonCalcular');
-    const resultadoDiv = document.getElementById('resultado');*/
-
     const numero1Input = document.getElementById('numero1');
     const numero2Input = document.getElementById('numero2');
     const operacionSelect = document.getElementById('operacion');

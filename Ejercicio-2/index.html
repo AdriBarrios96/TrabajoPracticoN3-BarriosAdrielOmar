@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtrar palabras</title>
+</head>
+<body>
+    <h1>Filtrar Palabras</h1>
+
+    <form id="filtrarForm">
+        <label for="filtroInput">Ingreso palabra o parte de ella:</label>
+        <br>
+        <input type="text" id="filtroInput" placeholder="Ej. Real Madrid">
+        <button typo="button" id="botonFiltrar">Filtrar</button>
+    </form>
+
+    <div id="mensajeError" style="color: red;"></div>
+
+    <h2>Lista de palabras:</h2>
+    <ul id="listaPalabras">
+        </ul>
+    
+    <script src="script.js"></script>
+</body>
+</html>
