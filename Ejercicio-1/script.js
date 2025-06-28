@@ -13,10 +13,10 @@ document.addEventListener('DOMContentLoaded', () => {
         const num2 = parseFloat(numero2Input.value); // volvemos flotante el segundo input
 
         if (operacion === 'division' && num2 === 0) {
-            botonCalcular.style.display = 'none'; //si se cumple, ocultamos el boton utilizando display y none.
+            botonCalcular.disabled = true; //deshabilita el boton
             resultadoDiv.textContent = "POR CERO IMPOSIBLE!"; // mostramos el mensaje al usuario.
         } else {
-            botonCalcular.style.display = 'block'; //si no se cumple, volvemos a mostrar el boton 'block' lo vuelve visible.
+            botonCalcular.disabled = false; //si no se cumple, habilita el boton.
             resultadoDiv.textContent = ''; //limpiamos cualquie mensaje que tengamos.
         }
     };
@@ -34,15 +34,14 @@ document.addEventListener('DOMContentLoaded', () => {
         // obtenemos la operacion que el usuario seleccione
         const operacion = operacionSelect.value;
 
-        console.log('Número 1:', num1);
-        console.log('Número 2:', num2);
-        console.log('Operación seleccionada:', operacion);
-        let resultado; //almacemos el resultado
+        resultadoDiv.textContent = ''; // Limpiamos errores o mensajes
 
         if (isNaN(num1) || isNaN(num2)) {
             resultadoDiv.textContent = 'Ingrese numeros validos.';
             return; 
         }
+
+        let resultado; // almacen el resulado
 
         //creamos un switch para realizar cada operacion
         switch (operacion) {
@@ -52,7 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
             case 'resta':
                 resultado = num1 - num2;
                 break;
-            case 'multipliacion':
+            case 'multiplicacion':
                 resultado = num1 * num2;
                 break;
             case 'division':
